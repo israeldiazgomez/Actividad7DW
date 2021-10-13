@@ -20,7 +20,6 @@ public async getClientes(req: Request, res: Response){
 
 public async crearClientes(req: Request, res:Response){
     const body: ClienteI = req.body;
-
     try {
         if(!body.nombre && !body.apellido && 
         !body.correo && !body.clave) return res.status(400).json({msg: "Requieren datos!!"});
@@ -30,14 +29,10 @@ public async crearClientes(req: Request, res:Response){
                     where: {correo: body.correo}
                 }
             );
-
         if(clienteExist){
             return res.status(400).json({msg: "Correo ya existe!!"})
         }
-
         const cliente = await Cliente.create(body);
-
-        
         res.status(200).json({cliente})
 
     } catch (error) {
