@@ -1,0 +1,27 @@
+{
+  "name": "actividad7",
+  "version": "1.0.0",
+  "description": "ACTIVIDAD#7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/israeldiazgomez/Actividad7DW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/israeldiazgomez/Actividad7DW/issues"
+  },
+  "homepage": "https://github.com/israeldiazgomez/Actividad7DW#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
+}
