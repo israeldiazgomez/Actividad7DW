@@ -2,7 +2,6 @@ const Sequelize = require('sequelize');
 
 
 const BD_NAME = 'db_osito7';
-
 const BD_USER = 'grupo4';
 const BD_PASS = 'Grupo4.123';
 
