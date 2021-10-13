@@ -21,5 +21,5 @@ export const database = new Sequelize(
 
 database.sync( {force: true})
     .then(function(){
-        console.log('Creda correctamente')
+        console.log('FUNCIONA CORRECTAMENTE ESTA VUELTA')
     })
