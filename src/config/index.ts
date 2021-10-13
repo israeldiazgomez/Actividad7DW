@@ -1,10 +1,10 @@
 import express, { Application } from "express";
 import morgan from "morgan";
-// import { Routes } from "../routes/index";
+import { Routes } from "../routes/index";
 
 export class App {
     app: Application;
-    // public routePrv: Routes = new Routes();
+    public routePrv: Routes = new Routes();
 
     constructor(
         private port?: number | string
