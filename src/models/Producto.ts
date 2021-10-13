@@ -1,7 +1,8 @@
-const Sequelize = require('sequelize');
+// const Sequelize = require('sequelize');
+import { Model, DataTypes } from 'sequelize';
 import {database} from "../database/db";
 
-export class Producto extends Sequelize.Model {
+export class Producto extends Model {
     public descripcion!: string;
     public precio!: string;
     public numero_exitencia!: string;
@@ -14,21 +15,21 @@ export interface ProductoI {
 Producto.init (
     {
         descripcion: {
-            type: Sequelize.DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
         precio: {
-            type: Sequelize.DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
         numero_existencia: {
-            type: Sequelize.DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
     },
     {
         tableName: "productos",
         sequelize: database,
-        timetamps: true
+        timestamps: true
     }
-);
+)
