@@ -9,8 +9,8 @@ export class Producto extends Model {
 }
 export interface ProductoI {
     descripcion: string;
-    precio: string;
-    numero_existencia: string;
+    precio: number;
+    numero_existencia: number;
 }
 Producto.init (
     {
@@ -19,11 +19,11 @@ Producto.init (
             allowNull: false
         },
         precio: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         numero_existencia: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
     },
