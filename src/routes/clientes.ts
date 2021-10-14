@@ -7,5 +7,6 @@ export class ClienteRoutes{
     public routes(app: Application):void {
         app.route('/cliente').get(this.clienteController.getClientes)
         app.route('/crearcliente').post(this.clienteController.crearClientes)
+        app.route('/eliminarcliente').post(this.clienteController.eliminarCliente)
     }
 }
