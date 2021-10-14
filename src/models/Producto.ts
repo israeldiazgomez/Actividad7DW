@@ -1,5 +1,5 @@
 // const Sequelize = require('sequelize');
-import { Model, DataTypes } from 'sequelize';
+import sequelize, { Model, DataTypes } from 'sequelize';
 import {database} from "../database/db";
 
 export class Producto extends Model {
@@ -32,4 +32,4 @@ Producto.init (
         sequelize: database,
         timestamps: true
     }
-)
+);

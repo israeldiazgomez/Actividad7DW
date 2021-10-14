@@ -1,5 +1,5 @@
 import { ClienteRoutes } from './clientes';
-import {ProductoRoutes} from './producto'
+import {ProductoRoutes} from './producto';
 
 
 export class Routes {

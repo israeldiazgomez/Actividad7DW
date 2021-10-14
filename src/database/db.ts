@@ -18,7 +18,7 @@ export const database = new Sequelize(
     }
 );
 
-database.sync( {force: true})
+database.sync( {forse: true})
     .then(function(){
         console.log('FUNCIONA CORRECTAMENTE ESTA VUELTA')
     })
