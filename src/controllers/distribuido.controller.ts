@@ -3,11 +3,7 @@ import { Distribuido, DistribuidoI } from "../models/Distribuido";
 
 
 export class DistribuidoController{
-    // public index(req:Request, res:Response){
-    //     Distribuido.findAll({})
-    //            .then((distribuidos:Array<Distribuido>)=> res.json(distribuidos))
-    //            .catch((err:Error) => res.status(500).json(err));
-    // }
+   
     public async getDistribuidos(req: Request,  res: Response ){
         try {
             const distribuidos = await Distribuido.findAll()
@@ -24,10 +20,7 @@ export class DistribuidoController{
  
      
      }
-    //  obtener una venta en especial
- 
-    //  public async getDistribuido(req: Request,  res: Response ){}
-    // -----otras consultas (CRUD - crear ) ------
+
     public async createDroveedores(req:Request, res: Response){
         const body: DistribuidoI = req.body
         try {
