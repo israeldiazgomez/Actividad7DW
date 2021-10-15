@@ -2,7 +2,7 @@ import exp from 'constants';
 import {Model, DataTypes} from 'sequelize';
 // const Sequelize = require('sequelize');
 import { database } from '../database/db';
-//import { Producto } from './Producto';
+import { Producto } from './Producto';
 import {Proveedore} from './Proveedore';
 
 
@@ -36,8 +36,8 @@ Distribuido.init(
 );
 
 
-//Distribuido.hasMany(Producto);
-//Producto.belongsTo(Distribuido);
+Producto.hasMany(Distribuido);
+Distribuido.belongsTo(Producto);
 
 Proveedore.hasMany(Distribuido);
 Distribuido.belongsTo(Proveedore);
