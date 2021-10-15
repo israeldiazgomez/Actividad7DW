@@ -20,5 +20,8 @@ export const database = new Sequelize(
 
 database.sync( {forse: true})
     .then(function(){
-        console.log('FUNCIONA CORRECTAMENTE ESTA VUELTA')
+        console.log('---------------------------------------------------------------------------------------------------------------')
+        console.log('-------------------------|                    FUNCIONA CORRECTAMENTE        |----------------------------------')
+        console.log('---------------------------------------------------------------------------------------------------------------')
+
     })
