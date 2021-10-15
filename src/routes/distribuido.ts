@@ -8,7 +8,7 @@ export class DistribuidoRoutes{
   
         app.route('/distribuido').get(this.distribuidoController.getDistribuidos);
         app.route('/borrardistribuido').delete(this.distribuidoController.borrarDistribuido);
-        app.route('/createproducto').post(this.distribuidoController.createDistribuido);
+        app.route('/createdistribuido').post(this.distribuidoController.createDistribuido);
     }
 
 } 
