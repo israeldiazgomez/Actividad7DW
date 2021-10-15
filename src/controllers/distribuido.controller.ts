@@ -21,7 +21,7 @@ export class DistribuidoController{
      
      }
 
-    public async createDroveedores(req:Request, res: Response){
+    public async createDistribuido(req:Request, res: Response){
         const body: DistribuidoI = req.body
         try {
             if((!body.cantidad )) return res.status(400).json({msg:'Se requieren datos'});
@@ -40,6 +40,28 @@ export class DistribuidoController{
         }
 
   }
+  public async borrarDistribuido(req: Request, res: Response){
+    try {
+
+        const { id } = req.body;
+    
+        const response = await Distribuido.destroy({
+          where: { id: id }
+        })
+        .then( function(data){
+          const res = { success: true, data: data, message:"Realizado el recorrido" }
+          return res;
+        })
+        .catch(error => {
+          const res = { success: false, error: error }
+          return res;
+        })
+        res.json(response);
+    
+      } catch (e) {
+        console.log(e);
+      }
+}  
 
  }
  
