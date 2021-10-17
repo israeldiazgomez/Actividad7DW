@@ -1,5 +1,7 @@
 import { Model, DataTypes } from 'sequelize';
 import { database } from '../database/db';
+import {Cliente} from './Cliente'
+import {Producto} from './Producto'
 
 export class Compra extends Model {
     public fecha!: Date;
@@ -20,6 +22,12 @@ Compra.init (
     {
         tableName: "compras",
         sequelize: database,
-        timestamps: true
+        timestamps: true,
     }
 );
+
+Cliente.hasMany(Compra);
+Compra.belongsTo(Cliente);
+
+Producto.hasMany(Compra);
+Compra.belongsTo(Producto);
