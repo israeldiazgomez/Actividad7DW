@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
-import { Compra } from '../models/Compra'
+import { Compra } from '../models/Compra';
+import { CompraI} from '../models/Compra'
 
 export class CompraController {
     
@@ -15,4 +16,22 @@ export class CompraController {
             res.status(500).json({ msg: 'Error interno'})
         }
     }
+
+    public async createCompra(req:Request, res: Response){
+        const body: CompraI = req.body
+        try {
+            if((!body.fecha )) return res.status(400).json({msg:'Se requieren datos'});
+            
+            const fech: Compra | null = await Compra.findOne(   {where: {fecha: body.fecha},
+            }
+           );
+
+         const compra = await Compra.create(body);
+         res.status(200).json({compra});
+
+          } catch (error) {
+            
+        }
+
+  }
 }
