@@ -4,6 +4,6 @@ import { CompraController} from '../controllers/compra.controller';
 export class CompraRoutes {
     public compraController: CompraController = new CompraController();
     public routes(app: Application): void{
-        app.route('/compra').get(this.compraController.index);
+        app.route('/compra').get(this.compraController.getCompras);
     }
 }
