@@ -17,13 +17,14 @@ export class ProductoController {
     public async createProducto(req: Request, res: Response){
         const body: ProductoI = req.body;
         try {
-            if((!body.descripcion && !body.precio && !body.numero_existencia)) return res.status(400).json({msg: 'some data is requiered'})
+            if((!body.descripcion && !body.precio && !body.numero_existencia))
+            //esta es la que va seguido de la anterior 
+            return res.status(400).json({msg: 'some data is requiered'})
             const productoExist: Producto | null = await Producto.findOne(
                 {
                     where: {descripcion: body.descripcion},
                 }
             )
-
             if(productoExist){
                 return res.status(400).json({msg: "descripcion ya existe!!"})
             }
